@@ -23,7 +23,7 @@ public class ProductController {
 	@Autowired
 	private ProductService productService;
 	
-	@RequestMapping(value = "/product", method = RequestMethod.GET)
+	@RequestMapping(value = "/products", method = RequestMethod.GET)
 	public String Products(ModelAndView model, Model models) {
 
 		if (productService.getAllProducts() != null) {
@@ -35,7 +35,7 @@ public class ProductController {
 		return "product";
 	}
 
-	@RequestMapping(value = "/product", method = RequestMethod.POST)
+	@RequestMapping(value = "/products", method = RequestMethod.POST)
 	public String Product() {
 		return "product";
 	}

@@ -338,11 +338,11 @@
                         </li>
 
                         <li>
-                            <a href="product.jsp">Shop</a>
+                            <a href="<spring:url value="/product/products"/>">Shop</a>
                         </li>
 
                         <li class="sale-noti">
-                            <a href="product.jsp">Sale</a>
+                            <a href="/product/products">Sale</a>
                         </li>
 
                         <li>
