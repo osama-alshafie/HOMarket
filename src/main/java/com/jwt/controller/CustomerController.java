@@ -13,20 +13,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class HomeController {
+@RequestMapping(value = "/customer")
+public class CustomerController {
 
-	private static final Logger logger = Logger.getLogger(HomeController.class);
+	private static final Logger logger = Logger.getLogger(CustomerController.class);
 
 	@Autowired
 	private CustomerService customerService;
 
-	@Autowired
-	private ProductService productService;
 
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
 	public ModelAndView newContact(ModelAndView model) {
-		Customer customer = new Customer();
-		model.addObject("customer", customer);
+		Customer cust = new Customer();
+		model.addObject("customer", cust);
 		model.setViewName("registeration");
 		return model;
 	}
@@ -40,32 +39,10 @@ public class HomeController {
 		}
 		return new ModelAndView("redirect:/");
 	}
-
-	@RequestMapping(value = "/BASE", method = RequestMethod.GET)
-	public String home() {
-		return "BASE";
-	}
-
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home2() {
-		return "home-02";
-	}
-
-	@RequestMapping(value = "/product", method = RequestMethod.GET)
-	public String Products(ModelAndView model, Model models) {
-
-		if (productService.getAllProducts() != null) {
-			models.addAttribute("products", productService.getAllProducts());
-		} else {
-			logger.debug("it's empty");
-		}
-
-		return "product";
-	}
-
-	@RequestMapping(value = "/product", method = RequestMethod.POST)
-	public String Product() {
-		return "product";
-	}
+	
+	 @RequestMapping(value = "/login", method = RequestMethod.GET)
+	 public String login() {
+		 return "login";
+	 }
 
 }

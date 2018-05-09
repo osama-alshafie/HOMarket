@@ -3,7 +3,7 @@ package com.jwt.model;
 import javax.persistence.*;
 
 @Entity
-public class Order {
+public class Orders {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;

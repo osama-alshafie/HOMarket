@@ -7,7 +7,7 @@
     <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
     <meta charset="UTF-8"/>
-    <title>Login</title>
+    <title>Registeration</title>
 
     <link rel="stylesheet"
           href="<spring:url value="/resources/css/home.css"/>" type="text/css"/>
@@ -42,7 +42,7 @@
                             class="icon-bar"></span> <span class="icon-bar"></span> <span
                             class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Online Exam</a>
+                    <a class="navbar-brand" href="#">HOMarket</a>
                 </div>
             </div>
             <!-- /.navbar-collapse -->
@@ -54,7 +54,7 @@
             <form role="form" class="subscribe">
                 <div class="form-group col-lg-4 col-lg-offset-4 intro">
                     <center>
-                        <h1>Online exam</h1>
+                        <h1>register now</h1>
                         <br>
                     </center>
                 </div>
@@ -74,6 +74,7 @@
                         <%--<spring:message code="todo.FN" />--%>
                 </div>
                 <div class="form-group col-lg-6 col-lg-offset-0">
+                    <form:label path="firstName" cssClass="form-control pass">first Name: </form:label>
                     <form:input path="firstName" cssClass="form-control pass"/>
 
                 </div>
@@ -81,40 +82,28 @@
                         <%--<form:errors path="studentName" ></form:errors>--%>
                 </div>
 
-                <!--  PHONE  -->
-
-                    <%--<div class="form-group col-lg-2 col-lg-offset-2">--%>
-                    <%--<spring:message code="todo.PHON" />--%>
-                    <%--</div>--%>
-                    <%--<div class="form-group col-lg-6 col-lg-offset-0 act">--%>
-                    <%--<form:input path="studentMobile" cssClass="form-control pass" />--%>
-                    <%--</div>--%>
-                    <%--<div class="form-group col-lg-12 col-lg-offset-0">--%>
-                    <%--<form:errors path="studentMobile" ></form:errors>--%>
-
-                    <%--</div>--%>
-                <!--  Gender -->
-
-                    <%--<div class="form-group col-lg-2 col-lg-offset-2">--%>
-                    <%--<spring:message code="todo.gender" />--%>
-                    <%--</div>--%>
-                    <%--<div class="form-group col-lg-6 col-lg-offset-0 act">--%>
-                    <%--<form:select path="studentGender" items="${options}" cssClass="form-control pass" />--%>
-
-                    <%--</div>--%>
-                    <%--<div class="form-group col-lg-12 col-lg-offset-0">--%>
-                    <%--<form:errors path="studentMobile" ></form:errors>--%>
-
+                
             </div>
 
+            <!-- secondName -->
+            <div class="form-group col-lg-2 col-lg-offset-2">
+                <%--<spring:message code="todo.FN" />--%>
+            </div>
+            <div class="form-group col-lg-6 col-lg-offset-0">
+                <form:label path="lastName" cssClass="form-control pass">Last Name: </form:label>
+                <form:input path="lastName" cssClass="form-control pass"/>
+            </div>
+            <div class="form-group col-lg-12 col-lg-offset-0">
+                <%--<form:errors path="studentName" ></form:errors>--%>
+            </div>
+            
             <!-- Email  -->
             <div class="form-group col-lg-2 col-lg-offset-2">
                     <%--<spring:message code="todo.EM" />--%>
             </div>
             <div class="form-group col-lg-6 col-lg-offset-0 act">
+                <form:label path="email" cssClass="form-control pass">E-mail: </form:label>
                 <form:input path="email" cssClass="form-control pass"/>
-
-
             </div>
             <div class="form-group col-lg-12 col-lg-offset-0">
                     <%--<form:errors path="studentEmail" />--%>
@@ -125,6 +114,7 @@
                     <%--<spring:message code="todo.PASS" />--%>
             </div>
             <div class="form-group col-lg-6 col-lg-offset-0 act">
+                <form:label path="password" cssClass="form-control pass">Password: </form:label>
                 <form:input path="password" cssClass="form-control pass"/>
             </div>
             <div class="form-group col-lg-12 col-lg-offset-12">

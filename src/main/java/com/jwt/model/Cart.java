@@ -28,7 +28,7 @@ public class Cart implements Serializable {
     private List<CartItem> cartItemList;
 
     @OneToOne(fetch = FetchType.LAZY)
-    private Order order;
+    private Orders order;
 
     @OneToOne(mappedBy = "cart", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Customer customer;
@@ -42,11 +42,11 @@ public class Cart implements Serializable {
         this.cartItemList = cartItemList;
     }
 
-    public Order getOrder() {
+    public Orders getOrder() {
         return order;
     }
 
-    public void setOrder(Order order) {
+    public void setOrder(Orders order) {
         this.order = order;
     }
 

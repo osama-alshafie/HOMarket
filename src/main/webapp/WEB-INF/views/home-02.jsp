@@ -366,7 +366,10 @@
                         <%--TODO--%>
                         <%--TODO--%>
                         <li>
-                            <a  href="<spring:url value="/register"/>" >Registeration3</a>
+                            <a  href="<spring:url value="/customer/register"/>" >Registeration</a>
+                        </li>
+                        <li>
+                            <a  href="<spring:url value="/customer/login"/>" >Sign in</a>
                         </li>
                     </ul>
                 </nav>
