@@ -609,6 +609,7 @@
                                 </span>
                             </div>
 
+                            <a href='<spring:url value="/product/product-detail/${product.id}" />'> ADD To Cart </a>
                         </div>
                     </c:forEach>
                 </div>
